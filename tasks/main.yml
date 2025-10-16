@@ -43,8 +43,8 @@
   package:
     name: "{{ gitlab_package_name | default(gitlab_edition) }}"
     state: present
-  async: 300
-  poll: 5
+  async: "{{ gitlab_package_install_timeout }}"
+  poll: "{{ gitlab_package_install_poll_interval }}"
   when: not gitlab_file.stat.exists
 
 # Start and configure GitLab. Sometimes the first run fails, but after that,

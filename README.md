@@ -48,6 +48,16 @@ The `gitlab.rb.j2` template packaged with this role is meant to be very generic 
   - Create a `templates\mygitlab.rb.j2` file (just choose a different name from the default template).
   - Set the variable like: `gitlab_config_template: mygitlab.rb.j2` (with the name of your custom template).
 
+### Installation settings
+
+    gitlab_package_install_timeout: '300'
+
+If installation fail because of timeout, you can increase this value
+
+    gitlab_package_install_poll_interval: '5'
+
+You can also configure interval between nodes where gitlab is installed    
+
 ### SSL Configuration.
 
     gitlab_redirect_http_to_https: true

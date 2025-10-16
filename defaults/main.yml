@@ -56,6 +56,10 @@ gitlab_dependencies:
   - openssl
   - tzdata
 
+# Install settings.
+gitlab_package_install_timeout: '300'
+gitlab_package_install_poll_interval: '5'
+
 # Optional settings.
 gitlab_time_zone: "UTC"
 gitlab_backup_keep_time: "604800"
